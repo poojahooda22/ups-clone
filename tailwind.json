@@ -1,0 +1,29 @@
+{
+	"static": {
+		"style": {
+			"position": "static"
+		}
+	},
+	"flex": {
+		"style": {
+			"display": "flex"
+		}
+	},
+	"hidden": {
+		"style": {
+			"display": "none"
+		}
+	},
+	"text-red-600": {
+		"style": {
+			"--tw-text-opacity": 1,
+			"color": "rgb(220 38 38 / var(--tw-text-opacity))"
+		}
+	},
+	"text-blue-700": {
+		"style": {
+			"--tw-text-opacity": 1,
+			"color": "rgb(29 78 216 / var(--tw-text-opacity))"
+		}
+	}
+}
