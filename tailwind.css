@@ -2,6 +2,26 @@
   position: static
 }
 
+.fixed {
+  position: fixed
+}
+
+.absolute {
+  position: absolute
+}
+
+.relative {
+  position: relative
+}
+
+.block {
+  display: block
+}
+
+.inline {
+  display: inline
+}
+
 .flex {
   display: flex
 }
@@ -10,9 +30,24 @@
   display: none
 }
 
-.text-red-600 {
-  --tw-text-opacity: 1;
-  color: rgb(220 38 38 / var(--tw-text-opacity))
+.h-64 {
+  height: 16rem
+}
+
+.w-full {
+  width: 100%
+}
+
+.border {
+  border-width: 1px
+}
+
+.uppercase {
+  text-transform: uppercase
+}
+
+.capitalize {
+  text-transform: capitalize
 }
 
 .text-blue-700 {
