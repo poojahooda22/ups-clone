@@ -1,0 +1,9 @@
+type Query {
+  """
+  Result typed as JSON since none of its fields is a valid GraphQL identifier ["-N6rOvLXK2t39x-Bp0UP", "-N6rQ_YDMNTjq_mCbhZN", "-N6rQsEqX4vt-0cBA336", "-N6rQvnBSkz2kglMvr5H", "-N6rSQz62DlXFPbd32CD"]
+  """
+  getOrders: JSON
+    @rest(
+      endpoint: "https://ups-clone-4cb3c-default-rtdb.firebaseio.com/orders.json"
+    )
+}
