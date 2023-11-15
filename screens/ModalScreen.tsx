@@ -9,14 +9,23 @@ import { TabStackParamList } from '../navigator/TabNavigator';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 
-
+type ModalScreenNavigationProp = CompositeNavigationProp<
+    BottomTabNavigationProp<TabStackParamList>,
+    NativeStackNavigationProp<RootStackParamList, "MyModal">
+>;
 
 const ModalScreen = () => {
     const tw = useTailwind();
-    const navigation = useNavigation();
+    const navigation = useNavigation<ModalScreenNavigationProp>();
   return (
     <View>
-      <Text>ModalScreen</Text>
+      <TouchableOpacity
+        onPress={navigation.goBack}
+        style={tw("abbsolute right-5 top-5 z-10")}
+      >
+        <Icon name="closecircle" type="antdesign" />
+
+      </TouchableOpacity>
     </View>
   )
 }
