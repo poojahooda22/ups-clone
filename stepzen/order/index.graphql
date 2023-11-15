@@ -1,9 +1,34 @@
+
+type Order {
+  carrier: String
+  createdAt: Date
+  shippingCost: Int
+  trackingId: String
+  Address: String
+  City: String
+  Lat: Float
+  Lng: Float
+  trackingItems: TrackingItems
+    @materializer(
+      query: "getTrackingItemById"
+      arguments: [{name: "id", field: "trackingId"}]
+    )
+}
+
+type OrderList {
+  name: ID
+  value: Order
+}
+
 type Query {
-  """
-  Result typed as JSON since none of its fields is a valid GraphQL identifier ["-N6rOvLXK2t39x-Bp0UP", "-N6rQ_YDMNTjq_mCbhZN", "-N6rQsEqX4vt-0cBA336", "-N6rQvnBSkz2kglMvr5H", "-N6rSQz62DlXFPbd32CD"]
-  """
-  getOrders: JSON
+  getOrdersById(id: ID): Order
+    @rest(
+      endpoint: "https://ups-clone-4cb3c-default-rtdb.firebaseio.com/orders/$id.json"
+    )
+
+  getOrders: [OrderList]
     @rest(
       endpoint: "https://ups-clone-4cb3c-default-rtdb.firebaseio.com/orders.json"
+       transforms: [{pathpattern: [], editor: "objectToArray"}]
     )
 }
