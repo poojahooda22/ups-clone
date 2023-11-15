@@ -12,6 +12,7 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 
 const ModalScreen = () => {
+    const tw = useTailwind();
   return (
     <View>
       <Text>ModalScreen</Text>
