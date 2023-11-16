@@ -2,7 +2,6 @@
 import { StyleSheet} from 'react-native';
 import {TailwindProvider} from 'tailwind-rn';
 import utilities from './tailwind.json';
-import CustomerScreen from './screens/CustomerScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import RootNavigator from './navigator/RootNavigator';
 import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
