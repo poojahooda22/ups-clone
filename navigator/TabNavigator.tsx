@@ -2,7 +2,7 @@ import { StyleSheet} from 'react-native'
 import React, { useLayoutEffect} from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'; 
 import CustomerScreen from '../screens/CustomerScreen';
-import OrderScreen from '../screens/OrderScreen';
+import OrdersScreen from '../screens/OrdersScreen';
 import { useNavigation } from '@react-navigation/native';
 import { Icon } from "@rneui/themed"
 
@@ -34,7 +34,7 @@ const TabNavigator = () => {
                         <Icon
                             name='users'
                             type='entypo'
-                            color={focused ? '#59c1cc' : 'gray'}
+                            color={focused ? '#59c1cc' : color}
                         />
                     );
                 } else if (route.name === 'Orders') {
@@ -42,7 +42,7 @@ const TabNavigator = () => {
                         <Icon
                             name='box'
                             type='entypo'
-                            color={focused ? '#eb6a7c' : 'gray'}
+                            color={focused ? '#eb6a7c' : color}
                         />
                     );
                 }
@@ -50,7 +50,7 @@ const TabNavigator = () => {
         })}
     >
       <Tab.Screen name="Customers" component={CustomerScreen} />
-      <Tab.Screen name="Orders" component={OrderScreen} />
+      <Tab.Screen name="Orders" component={OrdersScreen} />
     </Tab.Navigator>
   )
 }
