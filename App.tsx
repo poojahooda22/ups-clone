@@ -8,7 +8,8 @@ import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client
 
 
 const client = new ApolloClient({
-  uri: 'https://capelleaandenijssel.stepzen.net/api/illmannered-anteater',
+  uri: 'https://capelleaandenijssel.stepzen.net/api/illmannered-anteater/__graphql',
+  headers: {'Authorization':'apikey capelleaandenijssel::stepzen.io+1000::c2fc522197208bf93512c1168b8cc738c385169d4f93e368dc76d140e14c669b'},
   cache: new InMemoryCache(),
 });
 
