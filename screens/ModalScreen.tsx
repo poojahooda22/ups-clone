@@ -27,20 +27,20 @@ const ModalScreen = () => {
   return (
     <View>
       <TouchableOpacity
-        onPress={navigation.goBack}
-        style={tw("absolute right-5 top-5 z-10")}
+        onPress={() => navigation.goBack()}
+        style={ { position: 'absolute', right: 10, top: 10, zIndex: 10}}
       >
         <Icon name="closecircle" type="antdesign" />
       </TouchableOpacity>
 
-      <View style={{ marginTop: 10 }}>
+      <View style={{ marginTop: 20 }}>
             <View style={[tw("py-5 border-b"), { borderColor: "#59C1CC"}]}>
                 <Text 
-                  style={[tw("text-center text-xl font-bold"), { color: "#59C1CC"}]}
+                  style={ { color: "#59C1CC", textAlign: 'center', fontSize:18, fontWeight: 'bold'}}
                 >
                   {name}
                 </Text>
-                <Text style={[tw("text-center italic text-sm")]}>deliveries</Text>
+                <Text style={{textAlign: 'center', fontStyle: 'italic'}}>deliveries</Text>
             </View>
       </View>
 
