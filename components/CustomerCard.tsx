@@ -26,19 +26,23 @@ const CustomerCard = ({email, name, userId}: Props) => {
                 })
             }
         >
-            <Card containerStyle={tailwind("p-5 rounded-lg")}>
+            <Card containerStyle={[tailwind("p-5"), { borderRadius: 12}]}>
                 <View>
-                <View style={tailwind("flex-row justify-between")}>
+                <View style={ {flexDirection: 'row', justifyContent: 'space-between'}}>
                     <View>
-                        <Text style={tailwind("text-2xl font-bold")}>{name}</Text>
-                        <Text style={[tailwind("text-sm text-gray-500"), { color: "#59C1CC"}]}>ID: {userId}</Text>
+                        <Text 
+                            style={{fontSize: 18, fontWeight: 'bold'}}
+                        >
+                            {name}
+                        </Text>
+                        <Text style={ { color: "#59C1CC"}}>ID: {userId}</Text>
                     </View>
 
-                    <View style={tailwind(" flex flex-row items-center justify-end")}>
+                    <View style={{flexDirection: 'row', justifyContent: 'flex-end'}}>
                         <Text style={{ color: "#59C1CC"}}>
                             {loading ? "loading..." : `${orders.length} x`}</Text>
                         <Icon
-                            style={tailwind("mb-5 ml-auto")}
+                            style={{marginLeft: 5}}
                             name="box"
                             type="entypo"
                             color="#59C1CC"
@@ -47,7 +51,7 @@ const CustomerCard = ({email, name, userId}: Props) => {
                     </View>
                 </View>
                 </View>
-                <Card.Divider />
+                {/* <Card.Divider /> */}
                 <Text>{email}</Text>
             </Card>           
         </TouchableOpacity>
