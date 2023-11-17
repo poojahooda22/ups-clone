@@ -32,7 +32,7 @@ const ModalScreen = () => {
       >
         <Icon 
           name="closecircle" type="antdesign"
-          />
+        />
       </TouchableOpacity>
 
       <View style={{ marginTop: 20 }}>
