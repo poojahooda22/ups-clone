@@ -26,8 +26,8 @@ const OrderCard = ({item}: Props) => {
     <TouchableOpacity 
         onPress={() => navigation.navigate("Order", {order: item})}
     >
-        <Card containerStyle={[tailwind("px-5 rounded-lg")]}>
-            <View style={[tailwind(" justify-between items-center"), { flexDirection: 'row',  justifyContent: 'space-between',  alignItems: 'center' }]}>
+        <Card containerStyle={{borderRadius: 12}}>
+            <View style={ { flexDirection: 'row',  justifyContent: 'space-between',  alignItems: 'center' }}>
                 <View>
                     <Icon
                         name="truck-delivery"
@@ -40,20 +40,20 @@ const OrderCard = ({item}: Props) => {
                 </View>
 
                 <View>
-                    <Text style={[tailwind("text-gray-400"), { fontSize: 10, color: 'gray', textAlign: 'center'}]}>
+                    <Text style={{ fontSize: 10, color: 'gray', textAlign: 'center'}}>
                         {item.carrier} - {item.trackingId}
                     </Text>
 
-                    <Text style={[tailwind("text-gray-500 text-xl"), {textAlign: 'center'}]}>
+                    <Text style={ {textAlign: 'center'}}>
                         {item.trackingItems.customer.name}
                     </Text>
                 </View>
 
                 <View style={{ flexDirection: 'row', gap: 4}}>
-                    <Text style={[tailwind("text-sm"), { color: "#EB6A7C"}]}>
+                    <Text style={{ color: "#EB6A7C"}}>
                         {item.trackingItems.items.length} x
                     </Text>
-                    <Icon style={tailwind("ml-2")} name="box" type="feather" />
+                    <Icon style={{marginLeft: 4}} name="box" type="feather" />
                 </View>
             </View>
         </Card> 
