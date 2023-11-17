@@ -30,7 +30,8 @@ const ModalScreen = () => {
         onPress={() => navigation.goBack()}
         style={ { position: 'absolute', right: 10, top: 10, zIndex: 10}}
       >
-        <Icon name="closecircle" type="antdesign" />
+        <Icon 
+        name="closecircle" type="antdesign" />
       </TouchableOpacity>
 
       <View style={{ marginTop: 20 }}>
